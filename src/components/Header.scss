@@ -1,0 +1,38 @@
+@import "../styles/sass/bsp/helpers";
+
+@include webcomponentScope() {
+  .header {
+    @extend %base-viewport--padding-sides;
+    display: flex;
+    justify-content: space-between;
+    height: 140px;
+    background: #fff;
+
+    @include break(l, down) {
+      display: none;
+    }
+  }
+
+  .header__logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 304px;
+    }
+  }
+
+  .header__logo--right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      width: 100%;
+      max-width: 242px;
+    }
+  }
+}

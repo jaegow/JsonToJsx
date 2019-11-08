@@ -1,0 +1,32 @@
+
+@mixin break($break_size, $break_direction: false) {
+
+  @if $break_size {}
+  @else {
+    @warn "break first argument not set";
+  }
+
+  @if $breakpoints {}
+  @else {
+    @warn "$breakpoints variable must be set";
+  }
+
+  $breakpoint_size: '';
+
+  @if map-has-key($breakpoints, $break_size) {
+    $breakpoint_size: map-get($breakpoints, $break_size);
+  } @else {
+    @warn "Unknown map key of: `#{$break_size}` for $flows-map: `#{$breakpoints}`";
+  }
+
+  $breakpoint_direction_string: 'min-width';
+  @if $break_direction {
+    @if $break_direction == 'down' {
+      $breakpoint_direction_string: 'max-width';
+    }
+  }
+
+  @media screen and (#{$breakpoint_direction_string} : $breakpoint_size) {
+    @content;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../styles/sass/bsp/helpers";
+
+@include webcomponentScope() {
+  .search-criteria {
+    @extend %base-viewport;
+    @extend %base-viewport--padding-all;
+  }
+}

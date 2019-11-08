@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "object": "element",
+      "type": "h3",
+      "data":
+      {
+        "class": "form-title"
+      },
+      "leaves": [{
+        "text": "Matching Filters"
+      }]
+    },
+
+    {
+      "object": "component",
+      "type": "RadioGroup",
+      "data":
+      {
+        "name": "Country",
+        "label": "Country",
+        "value": "canada",
+        "options": [
+          { "value": "usa", "text": "USA" },
+          { "value": "canada", "text": "Canada" }
+        ]
+      }
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "ZipPostalCode",
+            "label": "Zip / Postal Code",
+            "placeholder": "Zip / Postal Code"
+          }
+        },
+
+        {
+          "object": "component",
+          "type": "Select",
+          "data":
+          {
+            "name": "MatchingSet",
+            "label": "Matching Set",
+            "value": "1",
+            "options": [
+              { "value": "1", "text": "All Sets" },
+              { "value": "2", "text": "Set tbd a" },
+              { "value": "3", "text": "Set tbd b" },
+              { "value": "4", "text": "Set tbd c" },
+              { "value": "5", "text": "Set tbd d" },
+              { "value": "6", "text": "Set tbd e" }
+            ]
+          }
+        }
+
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data": { "class": "is-divider" }
+    },
+
+    {
+      "object": "element",
+      "type": "h3",
+      "data":
+      {
+        "class": "form-title"
+      },
+      "leaves": [{
+        "text": "Dealer Record Filters"
+      }]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "AANShipto",
+            "label": "AAN/Ship To"
+          }
+        },
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "HQAANShipto",
+            "label": "HQ AAN/Ship To"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "BillTo",
+            "label": "Bill To"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "DealerName",
+            "label": "Dealer Name"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s"
+      },
+      "nodes": [
+
+        {
+          "object": "component",
+          "type": "RadioGroup",
+          "data":
+          {
+            "name": "ContractStatus",
+            "label": "Contract Status",
+            "options": [
+              { "value": "active", "text": "Active" },
+              { "value": "inactive", "text": "Inactive" }
+            ]
+          }
+        },
+
+        {
+          "object": "component",
+          "type": "CheckboxGroup",
+          "data":
+          {
+            "name": "DealerRecordStatus",
+            "label": "Dealer Record Status",
+            "options": [
+              { "value": "active", "text": "Active" },
+              { "value": "hold", "text": "Hold" },
+              { "value": "inactive", "text": "Inactive" }
+            ]
+          }
+        }
+
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data": { "class": "is-divider" }
+    },
+
+    {
+      "object": "element",
+      "type": "h3",
+      "data":
+      {
+        "class": "form-title"
+      },
+      "leaves": [{
+        "text": "816 Filters"
+      }]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "CustAccNumber",
+            "label": "Customer Account Number"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "DistBTName",
+            "label": "Distributor BT/Name"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "CustAddress816",
+            "label": "816 Customer Address"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "TextInput",
+          "data":
+          {
+            "name": "CustName816",
+            "label": "816 Customer Name"
+          }
+        }
+      ]
+    },
+
+    {
+      "object": "element",
+      "type": "div",
+      "data":
+      {
+        "class": "u-h-flow-s is-split"
+      },
+      "nodes": [
+        {
+          "object": "component",
+          "type": "DatePicker",
+          "data":
+          {
+            "name": "Import816Dates",
+            "label": "816 Import Date"
+          }
+        }
+      ]
+    }
+
+
+  ]
+}

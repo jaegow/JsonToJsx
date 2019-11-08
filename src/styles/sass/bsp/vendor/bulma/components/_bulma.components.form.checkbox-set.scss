@@ -1,0 +1,61 @@
+
+$checkmark-border-width: 4px !default;
+$checkmark-color: #27509b !default;
+$checkmark-border-color: $checkmark-color !default;
+$checkmark-box-size: 20px !default;
+
+.checkbox-set {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    opacity: 0;
+    width: calc(#{$checkmark-box-size} + #{flow(xxs)});
+    height: $checkmark-box-size;
+  }
+
+  label {
+    cursor: pointer;
+    color: #0a0a0a;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    padding-right: flow(xxs);
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    left: 0;
+    top: 0;
+    width: $checkmark-box-size;
+    height: $checkmark-box-size;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &::before {
+    background-color: white;
+    border: 2px solid $checkmark-border-color;
+  }
+
+  &::after {
+    content: '\2713 ';
+    color: $checkmark-color;
+    font-family: $family-primary;
+    ont-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+  }
+
+  &.is-selected {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

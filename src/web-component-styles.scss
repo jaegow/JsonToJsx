@@ -1,0 +1,13 @@
+@import "styles/sass/bsp/helpers";
+@import "styles/sass/bsp/vendor/cleanslate/cleanslate";
+@import "styles/sass/bsp/vendor/bulma/bulma.defined";
+@import "styles/sass/bsp/vendor/kendo/kendo.configured";
+
+@include webcomponentScope() {
+  // reset all styles that may leak into components when shadow dom is not supported
+  @extend %cleanslate;
+  @import "styles/sass/bsp/base.reset";
+  @import "styles/sass/bsp/vendor/bulma/bulma.output";
+  //@import "styles/sass/bsp/components/components.layout";
+  @import "styles/sass/bsp/util/utilities.flow";
+}

@@ -1,0 +1,121 @@
+$base-heading-color: $text-strong !default
+$base-heading-weight: $weight-semibold !default
+$base-heading-line-height: 1.125 !default
+
+$base-blockquote-background-color: $background !default
+$base-blockquote-border-left: 5px solid $border !default
+$base-blockquote-padding: 1.25em 1.5em !default
+
+$base-pre-padding: 1.25em 1.5em !default
+
+$base-table-cell-border: 1px solid $border !default
+$base-table-cell-border-width: 0 0 1px !default
+$content-table-cell-padding: 0.5em 0.75em !default
+$base-table-cell-heading-color: $text-strong !default
+$base-table-head-cell-border-width: 0 0 2px !default
+$base-table-head-cell-color: $text-strong !default
+$base-table-foot-cell-border-width: 2px 0 0 !default
+$base-table-foot-cell-color: $text-strong !default
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $base-heading-color
+  font-weight: $base-heading-weight
+  line-height: $base-heading-line-height
+h1
+  font-size: 2em
+h2
+  font-size: 1.75em
+h3
+  font-size: 1.5em
+h4
+  font-size: 1.25em
+h5
+  font-size: 1.125em
+h6
+  font-size: 1em
+blockquote
+  background-color: $base-blockquote-background-color
+  border-left: $base-blockquote-border-left
+  padding: $base-blockquote-padding
+ol
+  list-style-position: outside
+  margin-left: 2em
+  margin-top: 1em
+  &:not([type])
+    list-style-type: decimal
+    &.is-lower-alpha
+      list-style-type: lower-alpha
+    &.is-lower-roman
+      list-style-type: lower-roman
+    &.is-upper-alpha
+      list-style-type: upper-alpha
+    &.is-upper-roman
+      list-style-type: upper-roman
+ul
+  list-style: disc outside
+  margin-left: 2em
+  margin-top: 1em
+  ul
+    list-style-type: circle
+    margin-top: 0.5em
+    ul
+      list-style-type: square
+dd
+  margin-left: 2em
+figure
+  margin-left: 2em
+  margin-right: 2em
+  text-align: center
+  &:not(:first-child)
+    margin-top: 2em
+  &:not(:last-child)
+    margin-bottom: 2em
+  img
+    display: inline-block
+  figcaption
+    font-style: italic
+pre
+  +overflow-touch
+  overflow-x: auto
+  padding: $base-pre-padding
+  white-space: pre
+  word-wrap: normal
+sup,
+sub
+  font-size: 75%
+table
+  width: 100%
+  td,
+  th
+    border: $base-table-cell-border
+    border-width: $base-table-cell-border-width
+    padding: $content-table-cell-padding
+    vertical-align: top
+  th
+    color: $base-table-cell-heading-color
+    &:not([align])
+      text-align: left
+  thead
+    td,
+    th
+      border-width: $base-table-head-cell-border-width
+      color: $base-table-head-cell-color
+  tfoot
+    td,
+    th
+      border-width: $base-table-foot-cell-border-width
+      color: $base-table-foot-cell-color
+  tbody
+    tr
+      &:last-child
+        td,
+        th
+          border-bottom-width: 0
+
+button
+  @extend %button

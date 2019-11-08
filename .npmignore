@@ -1,0 +1,17 @@
+# config files not needed
+.eslintignore
+.eslintrc.js
+.gitmodules
+bitbucket-pipelines.yml
+.env*
+.idea
+jest.config.js
+
+# folders not needed
+build
+config
+only-4-reference
+public
+scripts
+src
+wiki

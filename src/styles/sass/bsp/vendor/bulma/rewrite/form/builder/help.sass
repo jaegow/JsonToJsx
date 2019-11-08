@@ -1,0 +1,18 @@
+@import "../../../../../_helpers.scss";
+
+$help-size: $size-small !default
+
+=help
+  display: block
+  font-size: $help-size
+  margin-top: flow(xxs)
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    &.is-#{$name}
+      color: $color
+%help
+  +help
+
+// how to below
+//.help
+//  @extend %help

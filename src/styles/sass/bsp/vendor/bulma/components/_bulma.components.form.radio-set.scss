@@ -1,0 +1,50 @@
+.radio-set {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    opacity: 0;
+  }
+
+  label {
+    cursor: pointer;
+    color: #0a0a0a;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-left: flow(xxs);
+    margin-right: flow(xs);
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: white;
+    border: 2px solid #27509b;
+  }
+
+  &::after {
+    transform: scale(0.45);
+    background-color: #27509b;
+    opacity: 0;
+  }
+
+  &.is-selected {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

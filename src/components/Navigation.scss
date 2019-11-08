@@ -1,0 +1,67 @@
+@import "../styles/sass/bsp/helpers";
+
+@include webcomponentScope() {
+  .nav {
+    @extend %base-viewport;
+    @extend %base-viewport--padding-sides;
+    background: #fff;
+    border-top: 1px solid #dcdddc;
+    border-bottom: 1px solid #dcdddc;
+  }
+
+  .nav__tier1 {
+    display: flex;
+    position: relative;
+
+    li {
+      &:hover {
+        .nav__tier2 {
+          display: flex;
+        }
+
+      }
+    }
+  }
+
+  .nav__tier2 {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  .nav__title {
+    font-weight: 600;
+    font-size: 16px;
+    padding: flow(xs);
+    text-transform: uppercase;
+  }
+
+  .nav__link--tier1 {
+    display: block;
+    color: #53565a;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .3s;
+    padding: flow(xs);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      border-bottom: 2px solid #27509b;
+    }
+  }
+
+  .nav__link--tier2 {
+    display: block;
+    padding: flow(xs);
+    color: #53565a;
+
+    &:hover {
+      background-color: rgb(243, 243, 243);
+
+    }
+  }
+}

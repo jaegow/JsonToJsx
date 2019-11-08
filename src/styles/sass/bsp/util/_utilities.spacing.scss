@@ -1,0 +1,100 @@
+/* ==========================================================================
+  #SPACINGS
+  from https://github.com/inuitcss/inuitcss/blob/develop/utilities/_utilities.spacings.scss
+   ========================================================================== */
+
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ *   .u-padding-right-none {}
+ *   .u-padding-horizontal {}
+ *   .u-padding-vertical-small {}
+ */
+
+$spacing-directions: (
+  null: null,
+  "-top": "-top",
+  "-right": "-right",
+  "-bottom": "-bottom",
+  "-left": "-left",
+  "-horizontal": "-left" "-right",
+  "-vertical": "-top" "-bottom",
+) !default;
+
+$spacing-properties: (
+  "padding": "padding",
+  "margin": "margin",
+) !default;
+
+$spacing-sizes: (
+  null: $performx-spacing-unit,
+  "-xxs": $performx-spacing-unit-xxs,
+  "-xs": $performx-spacing-unit-xs,
+  "-s": $performx-spacing-unit-s,
+  "-m": $performx-spacing-unit-m,
+  "-l": $performx-spacing-unit-l,
+  "-xl": $performx-spacing-unit-xl,
+  "-xxl": $performx-spacing-unit-xxl,
+  "-none": 0
+) !default;
+
+$debugList: ();
+
+@each $property-namespace, $property in $spacing-properties {
+
+  @each $direction-namespace, $direction-rules in $spacing-directions {
+
+    @each $size-namespace, $size in $spacing-sizes {
+
+      $util-class-name: '.u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}';
+
+      $debugList: append($debugList, $util-class-name);
+
+      //@debug "`#{$util-class-name}`";
+
+      #{$util-class-name} {
+
+        @each $direction in $direction-rules {
+
+          $util-prop-name: '#{$property}#{$direction}';
+          $util-prop-value: '#{$size} !important';
+
+          // @debug "util prop generated: `#{$util-prop-name}` with value `#{$util-prop-value}`";
+
+          #{$util-prop-name} : #{$util-prop-value};
+        }
+      }
+    }
+  }
+}
+
+@each $size-namespace, $size in $spacing-sizes {
+
+  $util-class-name: '.u-space#{$size-namespace}';
+
+  $debugList: append($debugList, $util-class-name);
+
+  #{$util-class-name} {
+    display: block;
+    flex: none;
+    width: auto;
+    height: auto;
+    padding: $size;
+  }
+
+  // @import "~bulma/sass/utilities/mixins";
+  //@include mobile() {
+  //  #{$util-class-name} {
+  //    display: block;
+  //    position: relative;
+  //  }
+  //}
+}
+
+@debug "util classes generated --- `#{$debugList}`";
+

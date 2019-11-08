@@ -1,0 +1,90 @@
+
+$flow-sizes: (
+  null: $performx-spacing-unit,
+  "-xxs": $performx-spacing-unit-xxs,
+  "-xs": $performx-spacing-unit-xs,
+  "-s": $performx-spacing-unit-s,
+  "-m": $performx-spacing-unit-m,
+  "-l": $performx-spacing-unit-l,
+  "-xl": $performx-spacing-unit-xl,
+  "-xxl": $performx-spacing-unit-xxl,
+  "-none": 0
+) !default;
+
+$debugList: ();
+
+@each $flow-namespace, $flow-size in $flow-sizes {
+  $util-class-name: '.u-v-flow#{$flow-namespace}';
+  $debugList: append($debugList, $util-class-name);
+
+  @debug "`#{$util-class-name}`";
+
+  #{$util-class-name} {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      flex: 1;
+      &:not(:last-child) {
+        margin-bottom : $flow-size !important;
+      }
+    }
+
+    @include break(m, down) {
+      [class^="u-h-flow"] {
+        & > *:not(:last-child) {
+          margin-bottom : $flow-size !important;
+        }
+      }
+    }
+  }
+}
+
+@each $flow-namespace, $flow-size in $flow-sizes {
+  $util-class-name: '.u-h-flow#{$flow-namespace}';
+  $debugList: append($debugList, $util-class-name);
+
+  @debug "`#{$util-class-name}`";
+
+  #{$util-class-name} {
+    display: flex;
+    flex-direction: row;
+
+    &.is-split {
+      width: calc(50% - #{$flow-size/2})
+    }
+
+    & > * {
+      flex: 1;
+
+      &:not(:first-child) {
+        margin-left: $flow-size/2 !important;
+      }
+
+      &:not(:last-child) {
+        margin-right: $flow-size/2 !important;
+      }
+    }
+
+    @include break(m, down) {
+      flex-direction: column;
+
+      &.is-split {
+        width: 100%;
+      }
+
+      & > * {
+        &:not(:first-child) {
+          margin-left: 0 !important;
+        }
+        &:not(:last-child) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+@debug "util classes generated --- `#{$debugList}`";

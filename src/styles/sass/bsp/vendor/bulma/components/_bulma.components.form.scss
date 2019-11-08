@@ -1,0 +1,87 @@
+@import "../bulma.defined";
+
+form {
+  // all form sets should use the field class as the wrapper
+  // this class is only being used for layout
+
+  .form-headline {
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  @import "bulma.components.form.radio-set";
+  @import "bulma.components.form.checkbox-set";
+
+  label, legend, .label {
+    @extend %label;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  input {
+    &[type=text] {
+      @extend %input;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    > * {
+      flex: 1;
+      &:not(:last-child) {
+        margin-bottom: flow(xxs);
+      }
+    }
+  }
+
+  .field--horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > * {
+      margin-bottom: flow(xxs);
+
+      &:not(:last-child) {
+        margin-right: flow(xxs);
+      }
+    }
+  }
+
+  .field--select {
+    @extend .field;
+
+    position: relative;
+
+    &::after {
+      @extend %arrow;
+      border-color: $input-arrow;
+      top: auto;
+      right: 1.125em;
+      bottom: 1.125em;
+      z-index: 4;
+    }
+
+    select {
+      @extend %input;
+      outline: none;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      option {
+        font-weight:normal;
+        font-size: 14px;
+        font-family: $family-primary;
+      }
+    }
+  }
+
+}

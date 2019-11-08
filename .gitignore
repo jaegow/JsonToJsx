@@ -1,0 +1,21 @@
+# IDE settings
+.idea
+.vscode
+
+# dependencies
+bower_components
+/node_modules
+
+# testing
+
+#
+build
+dist
+
+# environment
+.env.*
+
+# misc
+*.swp
+.DS_Store
+npm-debug.log*

@@ -1,0 +1,8 @@
+
+// !! HACK HARD CODED !! --> class added to block css from leaking to other components on the page
+// !! HACK HARD CODED !! --> class must match same class located here: src/web-components/ReactWebComponent.js > mountReact()
+@mixin webcomponentScope() {
+  .pxwcs {
+    @content;
+  }
+}

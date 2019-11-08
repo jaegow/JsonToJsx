@@ -1,0 +1,26 @@
+@import "../../../../../_helpers.scss";
+
+$label-color: $grey-darker !default
+$label-weight: $weight-bold !default
+
+=label
+  color: $label-color
+  display: block
+  font-size: $size-normal
+  font-weight: $label-weight
+  //&:not(:last-child)
+  //  margin-bottom: flow(xxs)
+  //// Sizes
+  //&.is-small
+  //  font-size: $size-small
+  //&.is-medium
+  //  font-size: $size-medium
+  //&.is-large
+  //  font-size: $size-large
+
+%label
+  +label
+
+// how to below
+//.lable
+//  @extend %label

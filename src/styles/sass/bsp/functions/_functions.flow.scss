@@ -1,0 +1,15 @@
+@function flow($flowKey) {
+  @if $flows-map {
+
+  }
+  @else {
+    @warn "$flows variable is not set";
+    @return null;
+  }
+
+  @if map-has-key($flows-map, $flowKey) {
+    @return map-get($flows-map, $flowKey);
+  } @else {
+    @warn "Unknown map key of: `#{$flowKey}` for $flows-map: `#{$flows-map}`";
+  }
+}

@@ -1,0 +1,38 @@
+// Commonly used to chunks/snippets of css.
+// These will create more lines of css but most compression algorithms handle common chunks of code
+// todo: confirm GZIP is happening on the server
+// see: https://css-tricks.com/the-difference-between-minification-and-gzipping/
+//
+// *  usage example:
+// *   .my-class {
+// *     @extend %example-snippet;
+// *   }
+//
+// *  @version 0.0.1
+// *  @author [Justin Gow](https://github.com/jaegow)
+
+%absolute-fill {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+%base-viewport {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 340px;
+}
+
+%base-viewport--padding-sides {
+  padding: 0 44px;
+}
+
+%base-viewport--padding-all {
+  padding: 44px;
+}
