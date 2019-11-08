@@ -14,8 +14,8 @@ export const ActionTypes = {
   LOAD_NAV_CONFIG: 'load_nav_config',
   UPDATE_NAV_CONFIG: 'update_nav_config',
 
-  LOAD_SEARCH_CRITERIA_CONFIG: 'load_search_criteria_config',
-  UPDATE_SEARCH_CRITERIA_CONFIG: 'update_search_criteria_config',
+  LOAD_FORM_CONFIG: 'load_form_config',
+  UPDATE_FORM_CONFIG: 'update_form_config',
 
   SAVE_ROUTER_DATA: 'save_router_data',
 };

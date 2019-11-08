@@ -2,6 +2,9 @@ import React, { Suspense, lazy } from 'react';
 import wrapReactComponents from './web-components/wrapReactComponents';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import FormLoader from './components/Form/FormLoader';
+import searchCriteriaJson from './components/FormTestData.json';
+import './web-component-styles.scss';
 
 // import CheckboxGroup from './components/Form/CheckboxGroup';
 // import RadioGroup from './components/Form/RadioGroup';
@@ -9,9 +12,6 @@ import Navigation from './components/Navigation';
 // import TextInput from './components/Form/TextInput';
 // import DatePicker from './components/Form/DatePicker';
 
-import FormLoader from './components/Form/FormLoader';
-import searchCriteriaJson from './components/SearchCriteria.json';
-import './web-component-styles.scss';
 // import { buildLoggers } from './utils/log';
 // const { log, warn } = buildLoggers('index.js');
 
@@ -37,17 +37,14 @@ const formComponents = {
 
 const Loading = () => (<p>Loading...</p>);
 
-const SearchCriteria = () => {
-
-  return (
-    <Suspense fallback={<Loading />}>
-      <FormLoader json={searchCriteriaJson} formComponents={formComponents} />
-    </Suspense>
-  );
-};
+const TestFormComponent = () => (
+  <Suspense fallback={<Loading />}>
+    <FormLoader json={searchCriteriaJson} formComponents={formComponents} />
+  </Suspense>
+);
 
 wrapReactComponents({
-  'performx-header': Header,
-  'performx-nav': Navigation,
-  'performx-search-criteria': SearchCriteria,
+  'test-header': Header,
+  'test-nav': Navigation,
+  'test-form-component': TestFormComponent,
 });

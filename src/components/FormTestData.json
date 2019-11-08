@@ -8,7 +8,7 @@
         "class": "form-title"
       },
       "leaves": [{
-        "text": "Matching Filters"
+        "text": "thing Filters"
       }]
     },
 
@@ -51,8 +51,8 @@
           "type": "Select",
           "data":
           {
-            "name": "MatchingSet",
-            "label": "Matching Set",
+            "name": "thingSet",
+            "label": "thing Set",
             "value": "1",
             "options": [
               { "value": "1", "text": "All Sets" },
@@ -82,7 +82,7 @@
         "class": "form-title"
       },
       "leaves": [{
-        "text": "Dealer Record Filters"
+        "text": "Filters"
       }]
     },
 
@@ -99,8 +99,8 @@
           "type": "TextInput",
           "data":
           {
-            "name": "AANShipto",
-            "label": "AAN/Ship To"
+            "name": "slkdjsjdl",
+            "label": "A thing"
           }
         },
         {
@@ -108,8 +108,8 @@
           "type": "TextInput",
           "data":
           {
-            "name": "HQAANShipto",
-            "label": "HQ AAN/Ship To"
+            "name": "coolBeens",
+            "label": "Cool Beans"
           }
         }
       ]
@@ -148,8 +148,8 @@
           "type": "TextInput",
           "data":
           {
-            "name": "DealerName",
-            "label": "Dealer Name"
+            "name": "sjdlkjskldsd",
+            "label": "Name"
           }
         }
       ]
@@ -183,8 +183,8 @@
           "type": "CheckboxGroup",
           "data":
           {
-            "name": "DealerRecordStatus",
-            "label": "Dealer Record Status",
+            "name": "stateee",
+            "label": "Status",
             "options": [
               { "value": "active", "text": "Active" },
               { "value": "hold", "text": "Hold" },
@@ -210,7 +210,7 @@
         "class": "form-title"
       },
       "leaves": [{
-        "text": "816 Filters"
+        "text": " Filters"
       }]
     },
 
@@ -248,7 +248,7 @@
           "data":
           {
             "name": "DistBTName",
-            "label": "Distributor BT/Name"
+            "label": "Distributor"
           }
         }
       ]
@@ -267,8 +267,8 @@
           "type": "TextInput",
           "data":
           {
-            "name": "CustAddress816",
-            "label": "816 Customer Address"
+            "name": "CustAddress",
+            "label": " Customer Address"
           }
         }
       ]
@@ -287,8 +287,8 @@
           "type": "TextInput",
           "data":
           {
-            "name": "CustName816",
-            "label": "816 Customer Name"
+            "name": "CustName",
+            "label": " Customer Name"
           }
         }
       ]
@@ -307,8 +307,8 @@
           "type": "DatePicker",
           "data":
           {
-            "name": "Import816Dates",
-            "label": "816 Import Date"
+            "name": "ImportDates",
+            "label": " Import Date"
           }
         }
       ]

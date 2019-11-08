@@ -47,7 +47,7 @@ const create = (JSXelement, tagName, shadowNodes) => {
         this.mountPoint = document.createElement('div');
         // !! HACK HARD CODED !! --> class added to block css from leaking to other components on the page
         // !! HACK HARD CODED !! --> class must match same class located here: src/styles/sass/mixins/_mixins.webcomponent.scss > webcomponentScope()
-        this.mountPoint.className = 'pxwcs';
+        this.mountPoint.className = 'scoped';
 
         // todo: should we close the shadow dom for distributions
         this.attachShadow({ mode: 'open' }).appendChild(this.mountPoint);

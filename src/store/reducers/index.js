@@ -3,14 +3,14 @@ import User from './userReducer';
 import Router from './routerReducer';
 import Container from './containerReducer';
 import Nav from './navReducer';
-import SearchCriteria from './searchCriteriaReducer';
+import Form from './formReducer';
 
 const rootReducer = combineReducers({
   User,
   Router,
   Container,
   Nav,
-  SearchCriteria,
+  Form,
 });
 
 export default rootReducer;

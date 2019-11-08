@@ -4,5 +4,3 @@ node_modules/*
 /styleguide/*
 /dist/*
 /config/*
-/only-4-reference/*
-/wiki/*

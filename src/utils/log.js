@@ -7,7 +7,7 @@ const defaultFormatOptions = {
 };
 
 
-const debug_element = document.getElementById('perform-x-debug');
+const debug_element = document.getElementById('jg-debug');
 const debug_hack = (message) => {
   if (debug_element) {
     const child = document.createElement('p');

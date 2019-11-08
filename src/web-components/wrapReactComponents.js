@@ -11,10 +11,10 @@ const _getInjectedStyles = () => {
   const template = document.createElement('template');
   let style_strings = [];
   // todo: currently dependent on global variable; need a better solution
-  if (window.__performX_config__) {
-    style_strings = window.__performX_config__.css.imports.map((url) => `@import "${url}";`);
+  if (window.__test_config__) {
+    style_strings = window.__test_config__.css.imports.map((url) => `@import "${url}";`);
   } else {
-    warn('__performX_config__ variable is missing and is needed for base configuration');
+    warn('__test_config__ variable is missing and is needed for base configuration');
   }
 
   if (process.env.NODE_ENV === 'development') {
@@ -36,13 +36,13 @@ const _getInjectedStyles = () => {
   // } else {
   //   // Build a element with a style tag and some css imports.
   //   // todo: currently dependent on global variable; need a better solution
-  //   const { __performX_config__ } = window;
-  //   if (__performX_config__) {
+  //   const { __test_config__ } = window;
+  //   if (__test_config__) {
   //     const template = document.createElement('template');
-  //     template.innerHTML = `<style>${__performX_config__.css.imports.map((url) => `@import "${url}";`).join('')}</style>`;
+  //     template.innerHTML = `<style>${__test_config__.css.imports.map((url) => `@import "${url}";`).join('')}</style>`;
   //     styleNodes = [template];
   //   } else {
-  //     warn('__performX_config__ variable is missing and is needed for base configuration');
+  //     warn('__test_config__ variable is missing and is needed for base configuration');
   //   }
   // }
   // log('_getInjectedStyles()', 'ENVIRONMENT:', process.env.NODE_ENV);
@@ -60,11 +60,11 @@ const _getInjectedStyles = () => {
 //   } else {
 //     // Build a element with a style tag and some css imports.
 //     // todo: currently dependent on global variable; need a better solution
-//     const { __performX_config__ } = window;
-//     if (__performX_config__) {
-//       styleString = __performX_config__.css.imports.map((url) => `@import "${url}";`).join('');
+//     const { __test_config__ } = window;
+//     if (__test_config__) {
+//       styleString = __test_config__.css.imports.map((url) => `@import "${url}";`).join('');
 //     } else {
-//       warn('__performX_config__ variable is missing and is needed for base configuration');
+//       warn('__test_config__ variable is missing and is needed for base configuration');
 //     }
 //   }
 //   log('_getSyleString()', 'ENVIRONMENT:', process.env.NODE_ENV);

@@ -1,11 +1,11 @@
-@import "~@progress/kendo-theme-material/scss/_functions.scss";
-@import "~@progress/kendo-theme-material/scss/_variables.scss";
-@import "~@progress/kendo-theme-material/scss/_mixins.scss";
+@import "~@progress/kendo-theme-material/scss/functions";
+@import "~@progress/kendo-theme-material/scss/variables";
+@import "~@progress/kendo-theme-material/scss/mixins";
 
 // Dependencies
-@import "~@progress/kendo-theme-material/scss/common/_all.scss";
-@import "~@progress/kendo-theme-material/scss/ripple.scss";
-@import "~@progress/kendo-theme-material/scss/popup.scss";
+@import "~@progress/kendo-theme-material/scss/common/all";
+@import "~@progress/kendo-theme-material/scss/ripple";
+@import "~@progress/kendo-theme-material/scss/popup";
 
 // Data management
 //@import "~@progress/kendo-theme-material/scss/pager.scss";
@@ -21,9 +21,9 @@
 //@import "~@progress/kendo-theme-material/scss/autocomplete.scss";
 //@import "~@progress/kendo-theme-material/scss/colorpicker.scss";
 //@import "~@progress/kendo-theme-material/scss/combobox.scss";
-@import "~@progress/kendo-theme-material/scss/datetime.scss";
+@import "~@progress/kendo-theme-material/scss/datetime";
 //@import "~@progress/kendo-theme-material/scss/dropdowngrid.scss";
-@import "~@progress/kendo-theme-material/scss/dropdownlist.scss";
+@import "~@progress/kendo-theme-material/scss/dropdownlist";
 //@import "~@progress/kendo-theme-material/scss/dropdowntree.scss";
 //@import "~@progress/kendo-theme-material/scss/editor.scss";
 //@import "~@progress/kendo-theme-material/scss/input.scss";

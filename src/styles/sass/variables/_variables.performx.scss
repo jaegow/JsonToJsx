@@ -1,0 +1,78 @@
+////////////////////////////////////////////////
+//
+// Perform X Spacing
+//
+////////////////////////////////////////////////
+
+$jg-spacing-unit:       0.333333333rem;   // 6px
+$jg-spacing-unit-xxs:   0.666666667rem;   // 12px
+$jg-spacing-unit-xs:    1rem;             // 18px
+$jg-spacing-unit-s:     1.333333333rem;   // 24px
+$jg-spacing-unit-m:     2rem;             // 36px
+$jg-spacing-unit-l:     2.666666667rem;   // 48px
+$jg-spacing-unit-xl:    3.555555556rem;   // 64px
+$jg-spacing-unit-xxl:   5.333333333rem;   // 96px
+
+$jg-spacing: (
+  null: $jg-spacing-unit,
+  xxs: $jg-spacing-unit-xxs,
+  xs: $jg-spacing-unit-xs,
+  s: $jg-spacing-unit-s,
+  m: $jg-spacing-unit-m,
+  l: $jg-spacing-unit-l,
+  xl: $jg-spacing-unit-xl,
+  xxl: $jg-spacing-unit-xxl,
+  none: 0
+) !default;
+
+
+////////////////////////////////////////////////
+//
+// Perform X Flow units
+//
+////////////////////////////////////////////////
+
+$jg-flow:         2rem;
+$jg-flow-xxs:     $jg-flow / 4;
+$jg-flow-xs:      $jg-flow / 3;
+$jg-flow-s:       $jg-flow / 2;
+$jg-flow-m:       $jg-flow;
+$jg-flow-l:       $jg-flow * 1.5;
+$jg-flow-xl:      $jg-flow * 2;
+$jg-flow-xxl:     $jg-flow * 2.5;
+
+$jg-flows: (
+  null: $jg-flow,
+  xxs: $jg-flow-xxs,
+  xs: $jg-flow-xs,
+  s: $jg-flow-s,
+  m: $jg-flow-m,
+  l: $jg-flow-l,
+  xl: $jg-flow-xl,
+  xxl: $jg-flow-xxl,
+  none: 0
+) !default;
+
+////////////////////////////////////////////////
+//
+// Perform X Breakpoints
+//
+////////////////////////////////////////////////
+
+$jg-breakpoint-unit-s:    0;
+$jg-breakpoint-unit-m:    640px;
+$jg-breakpoint-unit-l:    864px;
+$jg-breakpoint-unit-xl:    1024px;
+$jg-breakpoint-unit-xxl:   1200px;
+$jg-breakpoint-unit-xxxl:  1440px;
+
+$jg-breakpoints: (
+  s: $jg-breakpoint-unit-s,
+  m: $jg-breakpoint-unit-m,
+  l: $jg-breakpoint-unit-l,
+  xl: $jg-breakpoint-unit-xl,
+  xxl: $jg-breakpoint-unit-xxl,
+) !default;
+
+
+

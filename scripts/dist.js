@@ -88,7 +88,7 @@ async function build_and_dist() {
     // replace process.env.PUBLIC_URL in runtime.js
     const url_dist_runtime = path.resolve(url_dist_static, 'js/runtime-main.js');
     const pattern_in_runtime_file = new RegExp(`\"${process.env.PUBLIC_URL}\/\"`, 'g');
-    await replace_in_file(url_dist_runtime, pattern_in_runtime_file, 'window.__performX_config__.root');
+    await replace_in_file(url_dist_runtime, pattern_in_runtime_file, 'window.__test_config__.root');
 
     // replace process.env.PUBLIC_URL in the index.html
     const pattern_in_index_file = new RegExp(`${process.env.PUBLIC_URL}`, 'g');

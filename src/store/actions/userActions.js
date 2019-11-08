@@ -44,7 +44,7 @@ export const loadUserConfig = () => async (dispatch, getState) => {
     // todo: await api.get.user-config
 
     // warn('loadUserConfig()', 'global vars on window not preferred');
-    dispatch(updateUserConfig(window.CPUserData.Data));
+    dispatch(updateUserConfig(window.testWindowUserData.Data));
   } catch (err) {
     error('loadUserConfig()', err);
   }

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { useField } from 'formik';
 import uniqueId from 'lodash/uniqueId';
-import FormikError from './FormikError';
-import FormikSuccess from './FormikSuccess';
+import ErrorMessage from './ErrorMessage';
+import SuccessMessage from './SuccessMessage';
 // import { buildLoggers } from '../../utils/log';
 // const { log } = buildLoggers('TextInput');
 
@@ -29,11 +29,11 @@ const TextInput = ({ label, placeholder, success, ...props }) => {
         onBlur={field.onBlur}
         onChange={field.onChange}
       />
-      <FormikError
+      <ErrorMessage
         touched={meta.touched}
         error={meta.error}
       />
-      <FormikSuccess
+      <SuccessMessage
         touched={meta.touched}
         error={meta.error}
         message={success}

@@ -6,15 +6,12 @@
     <!-- MOCK DATA START -->
     <!-- MOCK MENU DATA START -->
     <script type="text/javascript">
-      var CPMenuData = [{"text":"Home","url":"/home/index","type":"link--text","modifier":"","icon":"home","current":false,"megamenuID":"/1/0/","image":""},{"text":"Earnings","url":"#","type":"link--text","modifier":"","icon":"account_balance","current":false,"megamenuID":"/1/1/","image":"fi-graph-bar"},{"text":"Promotions","url":"#","type":"link--text","modifier":"","icon":"record_voice_over","current":false,"megamenuID":"/1/2/","image":"fi-megaphone","items":[{"text":"Current Promotions","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/2/1/","image":"","items":[{"text":"Spring Sales Event","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/2/1/1/","image":""},{"text":"2019 Achiever’s Club: Magical Maui","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/2/1/2/","image":""},{"text":"Make Every Second Count","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/2/1/3/","image":""}]}]},{"text":"Messages","url":"#","type":"link--text","modifier":"","icon":"inbox","current":false,"megamenuID":"/1/3/","image":"fi-torso-business"},{"text":"Reporting","url":"#","type":"link--text","modifier":"","icon":"insert_chart","current":false,"megamenuID":"/1/4/","image":"fi-torso-business","items":[{"text":"Report Categories","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/4/1/","image":"","items":[{"text":"Revenue Reports","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/4/1/1/","image":""},{"text":"Earnings Reports","url":"#","type":"link-list","modifier":"","icon":"","current":false,"megamenuID":"/1/4/1/2/","image":""}]}]},{"text":"Dashboards","url":"/pbi/index","type":"link--text","modifier":"","icon":"dashboard","current":false,"megamenuID":"/1/5/","image":"fi-torso-business"},{"text":"Admin","url":"/pages/Admin/SiteAdmin.aspx","type":"link--text","modifier":"","icon":"assignment","current":false,"megamenuID":"/1/6/","image":"fi-torso-business"},{"text":"Profile","url":"/pages/UserProfile.aspx","type":"link--text","modifier":"menu-mobile__topborder","icon":"person","current":false,"megamenuID":"/1/7/","image":"fi-torso-business"},{"text":"Sign Out","url":"/logout","type":"link--text","modifier":"","icon":"exit_to_app","current":false,"megamenuID":"/1/8/","image":"fi-torso-business"}];
-      function CPLoadMenuData(finishCallback) { finishCallback(CPMenuData); }
-      var CPRightMenuData = [];
-      function CPLoadRightMenuData(finishCallback) { finishCallback(CPRightMenuData); }
+      var testNavFromWindow = [];
     </script>
     <!-- MOCK MENU DATA END -->
     <!-- MOCK USER DATA START -->
     <script type="text/javascript">
-      var CPUserData = {"Data":{"ParticipantId":3566,"UserId":25,"Username":"admin","FirstName":"Adam","LastName":"Joseph","Email":"admin@admin.com","Locale":"en-us","Status":1,"Roles":[1],"Privileges":[0,1,30,31,68,69,71,73,74,78,87,88,90,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,165,166,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224],"IsImp":false},"StatusCode":200,"Status":"success","ResponseCode":1,"ResponseMessage":"Success","Errors":[]};
+      var testWindowUserData = {"Data":{"ParticipantId":3566,"UserId":25,"Username":"admin","FirstName":"Adam","LastName":"Joseph","Email":"admin@admin.com","Locale":"en-us","Status":1,"Roles":[1],"Privileges":[0,1,30,31,68,69,71,73,74,78,87,88,90,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,165,166,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224],"IsImp":false},"StatusCode":200,"Status":"success","ResponseCode":1,"ResponseMessage":"Success","Errors":[]};
     </script>
     <!-- MOCK USER DATA END -->
     <!-- MOCK DATA END -->
@@ -33,7 +30,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <script type="text/javascript">
-      var __performX_config__ = {
+      var __test_config__ = {
         root: '/',
         css: {
           imports: [
@@ -46,18 +43,18 @@
       };
     </script>
 
-    <performx-header
-            image-left-src="%PUBLIC_URL%/static/media/michelin_horizontal_logo.svg"
-            image-right-src="%PUBLIC_URL%/static/media/my_earnings_horizontal_logo.svg">
-    </performx-header>
+    <test-header
+            image-left-src="%PUBLIC_URL%/static/media/somthing.svg"
+            image-right-src="%PUBLIC_URL%/static/media/something.svg">
+    </test-header>
 
-    <performx-nav></performx-nav>
+    <test-nav></test-nav>
 
-    <performx-search-criteria></performx-search-criteria>
+    <test-form-component></test-form-component>
 
     <!-- ELEMENT USED FOR SPA -->
     <div id="root"></div>
-    <div id="perform-x-debug" style="display: none;"></div>
+    <div id="jg-debug" style="display: none;"></div>
 
   </body>
 </html>

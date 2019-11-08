@@ -21,7 +21,7 @@ export const loadNavConfig = () => async (dispatch, getState) => {
     // todo: // const response = await fetch('sdlkjskld/app/spom');
 
     // warn('loadNavConfig()', 'global vars on window not preferred');
-    dispatch(updateNavConfig(window.CPMenuData));
+    dispatch(updateNavConfig(window.testNavFromWindow));
   } catch (err) {
     error('loadNavConfig()', err);
   }
